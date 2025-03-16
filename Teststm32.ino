@@ -1,3 +1,5 @@
+#include "my_library.h"
+
 // Definición de pines de los motores usando un array
 const int motorPins[6] = { 9, 4, 5, 10, 6, 7 };  // {enA, in1, in2, enB, in3, in4}
 
@@ -14,6 +16,9 @@ void setup() {
   for (int i = 0; i < 6; i++) {
     pinMode(*(motorPins + i), OUTPUT);  // Usando aritmética de punteros
   }
+
+  inicializar_driver();
+
 }
 
 void loop() {
